@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exams | ExamSeat</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            🎓
+            <span>EXAM<span>SEAT</span></span>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">
+                🏠 <span>Dashboard</span>
+            </a>
+
+            <a href="halls.html">
+                🏫 <span>Hall Management</span>
+            </a>
+
+            <a href="students.html">
+                👨‍🎓 <span>Students</span>
+            </a>
+
+            <a href="exams.html" class="active">
+                📝 <span>Exams</span>
+            </a>
+
+            <a href="seating.html">
+                🪑 <span>Seating Arrangement</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            ExamSeat
+            <br>
+            <small>Seating Arrangement System</small>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h2>Exam Management</h2>
+                <p>Create and manage examination sessions</p>
+            </div>
+
+            <div class="admin-profile">
+                👤 Administrator
+            </div>
+
+        </header>
+
+
+        <!-- ADD EXAM -->
+        <section class="form-card">
+
+            <div class="section-heading">
+
+                <h2>Create Exam Session</h2>
+
+                <p>
+                    Add examination name and date
+                </p>
+
+            </div>
+
+
+            <form id="examForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Exam Name</label>
+
+                        <input
+                            type="text"
+                            id="examName"
+                            placeholder="Example: Java Programming"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Exam Date</label>
+
+                        <input
+                            type="date"
+                            id="examDate"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="primary-btn">
+                    + Create Exam
+                </button>
+
+            </form>
+
+
+            <div id="examMessage" class="message"></div>
+
+        </section>
+
+
+        <!-- EXAM TABLE -->
+        <section class="table-card">
+
+            <div class="section-heading">
+
+                <h2>Exam Sessions</h2>
+
+                <p>
+                    Scheduled examinations
+                </p>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Exam Name</th>
+
+                            <th>Exam Date</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="examTableBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

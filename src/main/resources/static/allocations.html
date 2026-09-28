@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ExamSeat | Seat Allocations</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="layout">
+
+
+    <!-- =========================================
+         SIDEBAR
+         ========================================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <span>🎓</span>
+
+            <span>
+                EXAM<span>SEAT</span>
+            </span>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">
+                🏠
+                <span>Dashboard</span>
+            </a>
+
+            <a href="halls.html">
+                🏫
+                <span>Hall Management</span>
+            </a>
+
+            <a href="students.html">
+                👨‍🎓
+                <span>Students</span>
+            </a>
+
+            <a href="exams.html">
+                📝
+                <span>Exams</span>
+            </a>
+
+            <a href="seats.html">
+                💺
+                <span>Seat Management</span>
+            </a>
+
+            <a href="allocations.html"
+               class="active">
+
+                📋
+
+                <span>
+                    Seat Allocations
+                </span>
+
+            </a>
+
+            <a href="seating.html">
+                🪑
+                <span>Seating Arrangement</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            Exam Hall Seating System
+
+            <br>
+
+            <small>
+                Smart Seating Management
+            </small>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+         ========================================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOP BAR -->
+
+        <div class="topbar">
+
+            <div>
+
+                <h2>
+                    Seat Allocations
+                </h2>
+
+                <p>
+                    View students assigned to examination seats.
+                </p>
+
+            </div>
+
+
+            <div class="admin-profile">
+                👤 Admin
+            </div>
+
+        </div>
+
+
+
+        <!-- INFORMATION -->
+
+        <div class="welcome-box">
+
+            <div>
+
+                <h1>
+                    Seat Allocation Records
+                </h1>
+
+                <p>
+                    This page displays the current relationship
+                    between exams, students, halls and seats.
+                </p>
+
+            </div>
+
+
+            <div class="welcome-icon">
+                📋
+            </div>
+
+        </div>
+
+
+
+        <!-- ALLOCATION TABLE -->
+
+        <div class="table-card">
+
+
+            <div class="section-heading">
+
+                <h2>
+                    Allocation List
+                </h2>
+
+                <p>
+                    All currently stored seat allocations.
+                </p>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Exam</th>
+
+                            <th>Student</th>
+
+                            <th>Class / Section</th>
+
+                            <th>Seat</th>
+
+                            <th>Hall</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="allocationTableBody">
+
+                        <tr>
+
+                            <td colspan="7">
+                                Loading allocations...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

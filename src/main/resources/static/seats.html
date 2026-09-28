@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ExamSeat | Seat Management</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="layout">
+
+
+    <!-- =========================================
+         SIDEBAR
+         ========================================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <span>🎓</span>
+
+            <span>
+                EXAM<span>SEAT</span>
+            </span>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">
+                🏠
+                <span>Dashboard</span>
+            </a>
+
+            <a href="halls.html">
+                🏫
+                <span>Hall Management</span>
+            </a>
+
+            <a href="students.html">
+                👨‍🎓
+                <span>Students</span>
+            </a>
+
+            <a href="exams.html">
+                📝
+                <span>Exams</span>
+            </a>
+
+            <a href="seats.html" class="active">
+                💺
+                <span>Seat Management</span>
+            </a>
+
+            <a href="allocations.html">
+                📋
+                <span>Seat Allocations</span>
+            </a>
+
+            <a href="seating.html">
+                🪑
+                <span>Seating Arrangement</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            Exam Hall Seating System
+
+            <br>
+
+            <small>
+                Smart Seating Management
+            </small>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+         ========================================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOP BAR -->
+
+        <div class="topbar">
+
+            <div>
+
+                <h2>
+                    Seat Management
+                </h2>
+
+                <p>
+                    Create and manage seats for examination halls.
+                </p>
+
+            </div>
+
+
+            <div class="admin-profile">
+                👤 Admin
+            </div>
+
+        </div>
+
+
+
+        <!-- ADD SEAT -->
+
+        <div class="form-card">
+
+            <div class="section-heading">
+
+                <h2>
+                    Add New Seat
+                </h2>
+
+                <p>
+                    Assign a seat number and position to a hall.
+                </p>
+
+            </div>
+
+
+            <form id="seatForm">
+
+
+                <div class="form-grid">
+
+
+                    <!-- HALL -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Select Hall
+                        </label>
+
+                        <select id="seatHall" required>
+
+                            <option value="">
+                                Select a hall
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- SEAT NUMBER -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Seat Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="seatNumber"
+                            placeholder="Example: A1"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- ROW -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Row Number
+                        </label>
+
+                        <input
+                            type="number"
+                            id="seatRow"
+                            min="1"
+                            placeholder="Example: 1"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- COLUMN -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Column Number
+                        </label>
+
+                        <input
+                            type="number"
+                            id="seatColumn"
+                            min="1"
+                            placeholder="Example: 1"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn">
+
+                    Add Seat
+
+                </button>
+
+
+                <div
+                    id="seatMessage"
+                    class="message">
+                </div>
+
+
+            </form>
+
+        </div>
+
+
+
+        <!-- SEAT LIST -->
+
+        <div class="table-card">
+
+
+            <div class="section-heading">
+
+                <h2>
+                    Existing Seats
+                </h2>
+
+                <p>
+                    View all seats created for examination halls.
+                </p>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Hall</th>
+
+                            <th>Seat Number</th>
+
+                            <th>Row</th>
+
+                            <th>Column</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="seatTableBody">
+
+                        <tr>
+
+                            <td colspan="6">
+                                Loading seats...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

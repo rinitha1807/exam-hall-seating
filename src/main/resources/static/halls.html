@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hall Management | ExamSeat</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            🎓
+            <span>EXAM<span>SEAT</span></span>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">🏠 <span>Dashboard</span></a>
+
+            <a href="halls.html" class="active">
+                🏫 <span>Hall Management</span>
+            </a>
+
+            <a href="students.html">
+                👨‍🎓 <span>Students</span>
+            </a>
+
+            <a href="exams.html">
+                📝 <span>Exams</span>
+            </a>
+
+            <a href="seating.html">
+                🪑 <span>Seating Arrangement</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            ExamSeat
+            <br>
+            <small>Seating Arrangement System</small>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h2>Hall Management</h2>
+                <p>Add and manage examination halls</p>
+            </div>
+
+            <div class="admin-profile">
+                👤 Administrator
+            </div>
+
+        </header>
+
+
+        <!-- ADD HALL -->
+        <section class="form-card">
+
+            <div class="section-heading">
+                <h2>Add Examination Hall</h2>
+                <p>Enter the hall details below</p>
+            </div>
+
+            <form id="hallForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Hall Name</label>
+                        <input
+                            type="text"
+                            id="hallName"
+                            placeholder="Example: Main Hall"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rows</label>
+                        <input
+                            type="number"
+                            id="hallRows"
+                            min="1"
+                            placeholder="Example: 5"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Columns</label>
+                        <input
+                            type="number"
+                            id="hallColumns"
+                            min="1"
+                            placeholder="Example: 6"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Capacity</label>
+                        <input
+                            type="number"
+                            id="hallCapacity"
+                            min="1"
+                            placeholder="Example: 30"
+                            required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    + Add Hall
+                </button>
+
+            </form>
+
+            <div id="hallMessage" class="message"></div>
+
+        </section>
+
+
+        <!-- HALL TABLE -->
+        <section class="table-card">
+
+            <div class="section-heading">
+                <h2>Existing Halls</h2>
+                <p>List of examination halls</p>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Hall Name</th>
+                            <th>Rows</th>
+                            <th>Columns</th>
+                            <th>Capacity</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="hallTableBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

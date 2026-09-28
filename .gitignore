@@ -1,0 +1,15 @@
+target/
+.mvn/
+!.mvn/wrapper/
+*.class
+*.log
+
+.idea/
+.vscode/
+*.iml
+
+application-local.properties
+application-secret.properties
+
+.DS_Store
+Thumbs.db

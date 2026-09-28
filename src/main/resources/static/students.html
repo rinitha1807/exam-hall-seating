@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Students | ExamSeat</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            🎓
+            <span>EXAM<span>SEAT</span></span>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">
+                🏠 <span>Dashboard</span>
+            </a>
+
+            <a href="halls.html">
+                🏫 <span>Hall Management</span>
+            </a>
+
+            <a href="students.html" class="active">
+                👨‍🎓 <span>Students</span>
+            </a>
+
+            <a href="exams.html">
+                📝 <span>Exams</span>
+            </a>
+
+            <a href="seating.html">
+                🪑 <span>Seating Arrangement</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            ExamSeat
+            <br>
+            <small>Seating Arrangement System</small>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h2>Student Management</h2>
+                <p>Add and manage student information</p>
+            </div>
+
+            <div class="admin-profile">
+                👤 Administrator
+            </div>
+
+        </header>
+
+
+        <!-- ADD STUDENT -->
+        <section class="form-card">
+
+            <div class="section-heading">
+                <h2>Add Student</h2>
+                <p>Enter student details</p>
+            </div>
+
+            <form id="studentForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Roll Number</label>
+
+                        <input
+                            type="text"
+                            id="rollNumber"
+                            placeholder="Example: CSE001"
+                            required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Student Name</label>
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Example: Arun Kumar"
+                            required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Class / Section</label>
+
+                        <input
+                            type="text"
+                            id="classSection"
+                            placeholder="Example: CSE-A"
+                            required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    + Add Student
+                </button>
+
+            </form>
+
+            <div id="studentMessage" class="message"></div>
+
+        </section>
+
+
+        <!-- STUDENT TABLE -->
+        <section class="table-card">
+
+            <div class="section-heading">
+                <h2>Student List</h2>
+                <p>Registered students</p>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Roll Number</th>
+                            <th>Name</th>
+                            <th>Class / Section</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="studentTableBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

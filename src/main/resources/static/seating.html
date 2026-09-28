@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ExamSeat | Seating Arrangement</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+<div class="layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <span>🎓</span>
+
+            <span>
+                EXAM<span>SEAT</span>
+            </span>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">
+                🏠
+                <span>Dashboard</span>
+            </a>
+
+
+            <a href="halls.html">
+                🏫
+                <span>Hall Management</span>
+            </a>
+
+
+            <a href="students.html">
+                👨‍🎓
+                <span>Students</span>
+            </a>
+
+
+            <a href="exams.html">
+                📝
+                <span>Exams</span>
+            </a>
+
+
+            <a href="seats.html">
+                💺
+                <span>Seat Management</span>
+            </a>
+
+
+            <a href="allocations.html">
+                📋
+                <span>Seat Allocations</span>
+            </a>
+
+
+            <a href="seating.html"
+               class="active">
+
+                🪑
+
+                <span>
+                    Seating Arrangement
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            Exam Hall Seating System
+
+            <br>
+
+            <small>
+                Smart Seating Management
+            </small>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOP BAR -->
+
+        <div class="topbar">
+
+            <div>
+
+                <h2>
+                    Seating Arrangement
+                </h2>
+
+                <p>
+                    Generate an automatic examination seating plan.
+                </p>
+
+            </div>
+
+
+            <div class="admin-profile">
+
+                👤 Admin
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             GENERATE SEATING CARD
+             ================================================= -->
+
+        <div class="generate-card">
+
+
+            <div class="section-heading">
+
+                <h2>
+                    Generate Seating Arrangement
+                </h2>
+
+                <p>
+                    Select an exam and examination hall to
+                    automatically assign students to seats.
+                </p>
+
+            </div>
+
+
+
+            <div class="form-grid">
+
+
+                <!-- EXAM -->
+
+                <div class="form-group">
+
+                    <label for="seatingExam">
+                        Select Exam
+                    </label>
+
+
+                    <select id="seatingExam">
+
+                        <option value="">
+                            Select an exam
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- HALL -->
+
+                <div class="form-group">
+
+                    <label for="seatingHall">
+                        Select Hall
+                    </label>
+
+
+                    <select id="seatingHall">
+
+                        <option value="">
+                            Select a hall
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GENERATE BUTTON -->
+
+            <button
+                type="button"
+                id="generateButton"
+                class="generate-btn">
+
+                🪑 Generate Seating Arrangement
+
+            </button>
+
+
+
+            <!-- MESSAGE -->
+
+            <div
+                id="seatingMessage"
+                class="message">
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             GENERATED SEATING PLAN
+             ================================================= -->
+
+        <div
+            id="generationResult"
+            class="generation-result"
+            style="display: none;">
+
+            <div class="section-heading">
+
+                <h2>
+                    Generated Seating Plan
+                </h2>
+
+                <p>
+                    Automatically generated student seat allocation.
+                </p>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Seat
+                            </th>
+
+                            <th>
+                                Row
+                            </th>
+
+                            <th>
+                                Column
+                            </th>
+
+                            <th>
+                                Student
+                            </th>
+
+                            <th>
+                                Roll Number
+                            </th>
+
+                            <th>
+                                Class / Section
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody
+                        id="generatedSeatingBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
